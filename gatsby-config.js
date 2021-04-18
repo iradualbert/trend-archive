@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `The Archive`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `Albert Iradukunda`,
+      summary: `Who is an undergraduate student at Kocaeli University.`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
+    description: `Product Reviews`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `albert-archive`,
     },
   },
   plugins: [
@@ -18,6 +18,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/pages/md`,
+        name: `md`,
       },
     },
     {
@@ -94,7 +101,8 @@ module.exports = {
                     excerpt
                     html
                     fields {
-                      slug
+                      slug,
+                      collection
                     }
                     frontmatter {
                       title

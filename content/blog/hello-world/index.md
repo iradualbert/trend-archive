@@ -2,6 +2,7 @@
 title: Hello World
 date: "2015-05-01T22:12:03.284Z"
 description: "Hello World"
+photo: https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500 
 ---
 
 This is my first post on my new fake blog! How exciting!

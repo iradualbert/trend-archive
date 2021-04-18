@@ -1,14 +1,19 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
-  const { previous, next } = data
+  let { previous, next } = data
+  if (previous?.frontmatter?.notBlog) {
+    previous = null
+  }
+  if (next?.frontmatter?.notBlog) {
+    next = null
+  }
+  const isBlog = post.frontmatter.notBlog ? false : true
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -30,9 +35,6 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-        <footer>
-          <Bio />
-        </footer>
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -44,20 +46,24 @@ const BlogPostTemplate = ({ data, location }) => {
             padding: 0,
           }}
         >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
+          {isBlog && (
+            <>
+              <li>
+                {previous && (
+                  <Link to={previous.fields.slug} rel="prev">
+                    ← {previous.frontmatter.title}
+                  </Link>
+                )}
+              </li>
+              <li>
+                {next && (
+                  <Link to={next.fields.slug} rel="next">
+                    {next.frontmatter.title} →
+                  </Link>
+                )}
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </Layout>
@@ -85,6 +91,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        notBlog
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
@@ -93,6 +100,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        notBlog
       }
     }
     next: markdownRemark(id: { eq: $nextPostId }) {
@@ -101,6 +109,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+        notBlog
       }
     }
   }
