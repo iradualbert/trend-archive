@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
+import { MainImage } from "./shared";
 
 const RecentPost = ({ post }) => {
-  React.useEffect(() => {
-    console.log(post.frontmatter)
-  }, [])
+  // React.useEffect(() => {
+  //   console.log(post.frontmatter)
+  // }, [])
   const defaultImage =
     "https://contenthub-static.grammarly.com/blog/wp-content/uploads/2021/03/how-to-edit-any-type-of-writing-760x406.jpg"
 
@@ -15,7 +16,7 @@ const RecentPost = ({ post }) => {
 
   return (
     <Card to={fields.slug} itemProp="url">
-      <Image src={image} alt="" />
+      <MainImage src={image} alt="" />
       <Section>
         <Title>{title}</Title>
         <p
@@ -40,12 +41,6 @@ const Card = styled(Link)`
   text-decoration: none;
 `
 
-const Image = styled.img`
-   object-fit: cover;
-   width: 100%;
-   height: 400px;
-   border-radius: 10px 10px 0 0;
-`
 const Section = styled.section`
   letter-spacing: 0.15px;
   margin: 20px 0;

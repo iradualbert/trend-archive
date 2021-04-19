@@ -13,10 +13,11 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
+    'gatsby-plugin-image',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
+        path: `${__dirname}/src/content/blog`,
         name: `blog`,
       },
     },
@@ -101,8 +102,7 @@ module.exports = {
                     excerpt
                     html
                     fields {
-                      slug,
-                      collection
+                      slug
                     }
                     frontmatter {
                       title

@@ -1,7 +1,8 @@
 import React from "react"
 import styled from "styled-components"
-import { Link } from "gatsby"
-import { colors } from "../constants"
+import { Link } from "gatsby";
+
+
 
 const options = [
   { title: "Home", link: "/" },
@@ -19,7 +20,7 @@ const Navbar = () => {
       </NavLink>
       <NavMenu>
         {options.map(option => (
-          <NavLink to={option.link} key={option.title}>
+          <NavLink to={option.link} activeClassName="active-nav-link" key={option.title}>
             {option.title}
           </NavLink>
         ))}
@@ -33,7 +34,9 @@ const Nav = styled.nav`
   justify-content: space-between;
   align-items: center;
   height: 80px;
-
+  .active-nav-link {
+    border-bottom: 1px solid black;
+  }
 `
 
 const NavLink = styled(Link)`

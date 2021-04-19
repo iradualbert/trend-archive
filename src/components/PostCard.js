@@ -1,15 +1,17 @@
 import React from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import { Link } from "gatsby";
+import styled from "styled-components";
+import { PostCardImage } from "./shared";
 
 const PostCard = ({ post }) => {
   const title = post.frontmatter.title || post.fields.slug
   const photo = post.frontmatter.photo
   const link = post.fields.slug
+  // React.useEffect(() => {console.log(photo)}, [])
   return (
     <Card>
       <Link to={link}>
-        <Image src={photo} alt="" />
+        <PostCardImage src={photo} alt="" />
       </Link>
 
       <Article itemScope>
@@ -34,23 +36,21 @@ const PostCard = ({ post }) => {
 const Card = styled.li`
   display: flex;
   align-items: flex-start;
-  padding: 20px 0;
+  background: #fbfbfb;
+  padding: 20px;
   margin: 10px 0 0;
-  border-bottom: 1px solid #e0e0e0;
-  @media (max-width: 768px){
-      flex-direction: column;
+  border-radius: 8px;
+  /* border: 1px solid #e0e0e0; */
+  &:hover {
+    background: #fff;
+    box-shadow: 0 5px 10px rgb(154 160 185 / 5%),
+      0 15px 40px rgb(166 173 201 / 20%);
   }
-`
-const Image = styled.img`
-  object-fit: cover;
-  height: 160px;
-  width: 200px;
-  border-radius: 10px;
   @media (max-width: 768px) {
-      width: 100%;
-      height: 300px;
+    flex-direction: column;
   }
 `
+
 const Article = styled.article`
   display: flex;
   flex-direction: column;

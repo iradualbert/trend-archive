@@ -1,7 +1,8 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import SEO from "../components/seo";
+import { MainImage} from "../components/shared";
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -14,6 +15,7 @@ const BlogPostTemplate = ({ data, location }) => {
     next = null
   }
   const isBlog = post.frontmatter.notBlog ? false : true
+  const image = post.frontmatter.photo;
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -29,6 +31,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          {image && <MainImage src={image} />}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -91,6 +94,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        photo
         notBlog
       }
     }

@@ -1,11 +1,11 @@
 import * as React from "react"
-import { graphql } from "gatsby";
-import IndexPage from "../components/IndexPage";
+import { graphql } from "gatsby"
+import IndexPage from "../../components/IndexPage"
 
-const HomeIndex = ({ data, location }) => {
-   return <IndexPage data={data} location={location} title={"Home"} />
+const BooksIndex = ({ data, location }) => {
+  return <IndexPage data={data} location={location} title={"Books"} />
 }
-export default HomeIndex
+export default BooksIndex
 
 export const pageQuery = () => graphql`
   query {
@@ -15,7 +15,7 @@ export const pageQuery = () => graphql`
       }
     }
     allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(content)/"}}
+      filter: { fileAbsolutePath: { regex: "/(books)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {

@@ -2,13 +2,16 @@ import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
 
-const contactData = []
 
+const contentData = [
+  { title: "Books", link: "/books" },
+  { title: "Movies", link: "/movies" },
+  { title: "Gaming", link: "/gaming" },
+]
 const supportData = [
-  { title: "Help Center", link: "/help" },
+  { title: "About Us", link: "/about" },
+  { title: "Contact Us", link: "/contact" },
   { title: "Privacy Policy", link: "/privacy-policy" },
-  { title: "Terms of Service", link: "/terms" },
-  { title: "Security", link: "/security" },
 ]
 
 const communityData = [
@@ -34,12 +37,7 @@ const Footer = () => {
 
   return (
     <FooterContainer>
-      <FooterLinksWrapper>
-        <FooterDesc>
-          <h1>Explore</h1>
-          <p>Live your experience with Unreal Destinations</p>
-        </FooterDesc>
-      </FooterLinksWrapper>
+      {renderColumn('Content', contentData)}
       {renderColumn("Support", supportData)}
       {renderColumn("Community", communityData)}
     </FooterContainer>
@@ -47,7 +45,7 @@ const Footer = () => {
 }
 
 const FooterContainer = styled.div`
-  padding: 3rem calc((100vw - 1300px) / 2);
+  padding: 1.5rem calc((100vw - 1300px) / 2);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   background: #000;
@@ -57,16 +55,7 @@ const FooterContainer = styled.div`
   }
 `
 const FooterLinksWrapper = styled.div``
-const FooterDesc = styled.div`
-  padding: 0 2rem;
-  h1 {
-    margin-bottom: 1rem;
-    color: #f26a2e;
-  }
-  @media screen and (max-width: 400px) {
-    padding: 1rem;
-  }
-`
+
 const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
@@ -79,6 +68,7 @@ const FooterLinkItems = styled.div`
 const FooterLinkTitle = styled.h2`
   font-size: 14px;
   margin-bottom: 16px;
+ 
 `
 const FooterLink = styled(Link)`
   text-decoration: none;
