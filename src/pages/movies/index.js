@@ -28,10 +28,12 @@ export const pageQuery = graphql`
           title
           description
           photo {
-            childImageSharp{
-              fluid {
-                ...GatsbyImageSharpFluid
-              }
+            childImageSharp {
+              gatsbyImageData(
+                width: 200
+                placeholder: BLURRED
+                formats: [AUTO, WEBP, AVIF]
+              )
             }
           }
         }
