@@ -5,15 +5,14 @@ import { PostCardImage } from "./shared";
 
 const PostCard = ({ post }) => {
   const title = post.frontmatter.title || post.fields.slug
-  const photo = post.frontmatter.photo
+  const photo = post.frontmatter.photo // ?.childImageSharp?.fluid
   const link = post.fields.slug
   // React.useEffect(() => {console.log(photo)}, [])
   return (
     <Card>
       <Link to={link}>
-        <PostCardImage src={photo} alt="" />
+        <PostCardImage photo={photo} alt=""/>
       </Link>
-
       <Article itemScope>
         <small>{post.frontmatter.date}</small>
         <h2>

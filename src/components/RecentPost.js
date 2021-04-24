@@ -7,16 +7,14 @@ const RecentPost = ({ post }) => {
   // React.useEffect(() => {
   //   console.log(post.frontmatter)
   // }, [])
-  const defaultImage =
-    "https://contenthub-static.grammarly.com/blog/wp-content/uploads/2021/03/how-to-edit-any-type-of-writing-760x406.jpg"
-
-  const { fields, frontmatter } = post
+  
+  const { fields } = post
   const title = post.frontmatter.title || post.fields.slug
-  const image = post.frontmatter.photo;
+  const photo = post.frontmatter.photo;
 
   return (
     <Card to={fields.slug} itemProp="url">
-      <MainImage src={image} alt="" />
+      <MainImage photo={photo} alt="" />
       <Section>
         <Title>{title}</Title>
         <p

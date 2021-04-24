@@ -1,24 +1,46 @@
 module.exports = {
   siteMetadata: {
-    title: `The Archive`,
+    title: `The Trend Archive`,
     author: {
       name: `Albert Iradukunda`,
       summary: `Who is an undergraduate student at Kocaeli University.`,
     },
-    description: `Product Reviews`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `Books, Movies, And Games Reviews`,
+    siteUrl: `https://thetrendarchive.com`,
     social: {
-      twitter: `albert-archive`,
+      twitter: `albertarchive`,
     },
   },
   plugins: [
     `gatsby-plugin-image`,
-    'gatsby-plugin-image',
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/books`,
+        name: `books`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/games`,
+        name: `games`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/movies`,
+        name: `movies`,
       },
     },
     {
@@ -120,19 +142,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `The Trend Archive`,
+        short_name: `TA`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

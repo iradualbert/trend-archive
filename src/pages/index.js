@@ -7,7 +7,7 @@ const HomeIndex = ({ data, location }) => {
 }
 export default HomeIndex
 
-export const pageQuery = () => graphql`
+export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
@@ -15,7 +15,7 @@ export const pageQuery = () => graphql`
       }
     }
     allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(content)/"}}
+      filter: { fileAbsolutePath: { regex: "/(content)/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       nodes {
@@ -27,7 +27,11 @@ export const pageQuery = () => graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-          photo
+          photo {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }

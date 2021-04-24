@@ -1,7 +1,7 @@
 ---
 title: My Second Post!
 date: "2015-05-06T23:46:37.121Z"
-photo: https://images.pexels.com/photos/7218091/pexels-photo-7218091.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940
+photo: ./main.png
 ---
 
 Wow! I love blogging so much already.

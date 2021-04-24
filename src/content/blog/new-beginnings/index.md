@@ -1,6 +1,6 @@
 ---
 title: New Beginnings
-photo: "https://images.pexels.com/photos/7217897/pexels-photo-7217897.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+photo: ./main.png
 date: "2015-05-28T22:40:32.169Z"
 description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
 
@@ -12,6 +12,8 @@ Far far away, behind the word mountains, far from the countries Vokalia and
 Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 right at the coast of the Semantics, a large language ocean. A small river named
 Duden flows by their place and supplies it with the necessary regelialia.
+
+<!-- ![image info](../../books/5-great-books-to-improve-your-english/main.png) -->
 
 ## On deer horse aboard tritely yikes and much
 
@@ -42,6 +44,7 @@ rewritten, then they are still using her.
 > Far far away, behind the word mountains, far from the countries Vokalia and
 > Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
 > right at the coast of the Semantics, a large language ocean.
+> I added this brothers and sisters
 
 It is a paradisematic country, in which roasted parts of sentences fly into your
 mouth. Even the all-powerful Pointing has no control about the blind texts it is

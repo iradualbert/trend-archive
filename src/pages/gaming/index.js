@@ -7,7 +7,7 @@ const GamesIndex = ({ data, location }) => {
 }
 export default GamesIndex
 
-export const pageQuery = () => graphql`
+export const pageQuery = graphql`
   query {
     site {
       siteMetadata {
@@ -27,7 +27,11 @@ export const pageQuery = () => graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
-          photo
+          photo {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
       }
     }

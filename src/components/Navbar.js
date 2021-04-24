@@ -1,26 +1,39 @@
-import React from "react"
+import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components"
-import { Link } from "gatsby";
+import { Link } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
+import { FaBars } from "react-icons/fa";
+import { navOptions as options } from "../constants";
+
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`
 
 
 
-const options = [
-  { title: "Home", link: "/" },
-  { title: "Books", link: "/books" },
-  { title: "Movies", link: "/movies" },
-  { title: "Gaming", link: "/gaming" },
-  { title: "About Us", link: "/about" },
-]
-
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
+  const { site } = useStaticQuery(query);
+  // React.useEffect(() => { console.log(site)}, [])
   return (
     <Nav>
       <NavLink to="/">
-        <h1>Trend Archive</h1>
+        <h1>{site.siteMetadata.title}</h1>
       </NavLink>
+      <Bars onClick={toggle}/>
       <NavMenu>
         {options.map(option => (
-          <NavLink to={option.link} activeClassName="active-nav-link" key={option.title}>
+          <NavLink
+            to={option.link}
+            activeClassName="active-nav-link"
+            key={option.title}
+          >
             {option.title}
           </NavLink>
         ))}
@@ -51,8 +64,16 @@ const NavLink = styled(Link)`
     border-bottom: 1px solid black;
   }
   h1 {
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (max-width: 760px) {
+    h1 {
+      font-size: 24px;
+    }
   }
   
 `
@@ -65,5 +86,23 @@ const NavMenu = styled.div`
     display: none;
   }
 `
+
+const Bars = styled(FaBars)`
+  display: none;
+  color: #1a202c;
+  @media screen and (max-width: 768px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 75%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`
+
+Navbar.propTypes = {
+  toggle: PropTypes.func.isRequired
+}
 
 export default Navbar

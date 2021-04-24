@@ -1,32 +1,32 @@
 ---
-title: Trend Archive Privacy Policy
+title: The Trend Archive Privacy Policy
 notBlog: true
 ---
 
 # Introduction
-At Lanpaker LLC, accessible at [https://www.lanpaker.com](/), it is one of our main priorities to protect our users privacy. This Privacy Policy document contains types of information that is collected and recorded by Lanpaker and how we use it.
+At The Trend Archive, accessible at [https://www.thetrendarchive.com](/), it is one of our main priorities to protect our users privacy. This Privacy Policy document contains types of information that is collected and recorded by The Trend Archive and how we use it.
 
 
-This privacy policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in ``Lanpaker``. This policy is not applicable to any information collected offline or via channels other than this website.
+This privacy policy applies only to our online activities and is valid for visitors to our website with regards to the information that they shared and/or collect in **The Trend Archive** . This policy is not applicable to any information collected offline or via channels other than this website.
 
 # Consent
 
-By using our Site, you hereby consent to our Privacy Policy and agree to its [Terms](/terms).
+By visiting our site, you hereby consent to our Privacy Policy.
 
 # Collection Of Personal Information
 
 ## Information you provide to us.
-We collect personal identifiable information you provide when you create Lanpaker account. We collect and store this information.
+We collect personal identifiable information you provide when you create The Trend Archive account. We collect and store this information.
 
 When you register for an Account, we may ask for your contact information, including items such as name, company name, address, email address, and telephone number.
 
-If you purchase lanpaker subscriptions, we collect your credit card information
+If you purchase The Trend Archive subscriptions, we collect your credit card information
 
 
 ## Information we automatically collect
 
 We collect information about you and how you use our services, your interactions with us. This information includes:
- - The lessons you access, like, review and save including data and time.
+ - The pages you access.
  - The amount time you spend on our site.
 
 
@@ -48,7 +48,7 @@ Develop new products, services, features, and functionality.
 
 # Cookies and Web Beacons
 
-Like any other website, Website Name uses ‘cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
+Like any other website, The Trend Archive uses ‘cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.
 
 
 
@@ -75,7 +75,24 @@ If you make a request, we have one month to respond to you. If you would like to
 
 Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.
 
-LanPaker does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+The Trend Archive does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.
+
+# Links
+This website contains links to other websites. We are not responsible for the privacy practices of other websites. We strongly encourage you to read the privacy policy (or privacy statement) of each and every website you visit, as this privacy policy applies solely to this website.
+
+
+### Affliate Links
+
+This website may contain affliate links for the products we use and recommend. The Trend Archive may receive a commission if you click on those links or purchase items through those links. However, any references to the third party products, rates, or websites are subject to change without notice. Please do the appropriate research before participating in any third party offers.
+
+
+# Advertisements
+
+We use Google AdSense to serve content and advertisements to users on this website. This ad network uses cookies to deliver these advertisements. No personal information is shared with the website’s ad providers.
+
 
 # Changes to this Statement
-Lanpaker will occasionally update this Statement of Privacy to reflect company and customer feedback. Lanpaker encourages you to periodically review this Statement to be informed of how Lanpaker is protecting your information.
+The Trend Archive will occasionally update this Statement of Privacy to reflect company and customer feedback. The Trend Archive encourages you to periodically review this Statement to be informed of how The Trend Archive is protecting your information.
+
+
+##### Last Updated on April 25th, 2021
