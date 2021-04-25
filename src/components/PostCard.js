@@ -54,7 +54,6 @@ const Article = styled.article`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 32px;
   width: 100%;
   small {
     margin: 0 0 10px;
@@ -70,7 +69,6 @@ const Article = styled.article`
     margin: 0 0 20px;
   }
   @media (max-width: 768px){
-      margin-left: 0;
       margin-top: 10px;
   }
 `
