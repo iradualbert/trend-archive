@@ -53,11 +53,9 @@ const Icon = styled.div`
 const SidebarMenu = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  max-height: 400px;
 `
 
 const SidebarLink = styled(Link)`
