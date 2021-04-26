@@ -5,7 +5,10 @@ photo: ./main.png
 ---
 
 Reading is arguably one of the most effective ways to improve your English language skills. However, It is often difficult for a beginner to start learning a language by reading. But when you have grasped the basics, most common vocabularies, and basic grammar rules, it is advisable to exercise their reading muscles as it will expose you to a wider range of vocabulary, and grammar. However, with all the books that are out there, it may be overwhelming to find the right books. In this article, we will reveal 5 books that are great for both intermediate and advanced English learners.
-But where should you start? This is a question that haunts many people, even avid readers can find it difficult to immediately delve into reading without proper guidance. One should keep in mind that there is no one-size-fits-all. Some people enjoy reading novels while others are mesmerized by biography books depending on one’s interests. Knowing this, we have collected a variety of books ranging from novels to biographies. While in this article, we will try to cover most of the areas, one should first discover what interests them while choosing what book to start with.
+
+
+
+But where should you start? This is a question that haunts many people, even avid readers can find it difficult to immediately delve into reading without proper guidance. One should keep in mind that there is no one-size-fits-all. Some people enjoy reading novels while others are mesmerised by biography books depending on one’s interests. Knowing this, we have collected a variety of books ranging from novels to biographies. While in this article, we will try to cover most of the areas, one should first discover what interests them while choosing what book to start with.
 Below are the suggested books for an intermediate reader who wants to take their English skills to a more advanced level.
 
 **1. The Alchemist by Paulo Coelho**

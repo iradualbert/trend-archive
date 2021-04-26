@@ -239,6 +239,11 @@ a:focus {
   text-decoration: none;
 }
 
+a > img {
+  display: flex;
+  margin: 10px 0;
+}
+
 /* Custom classes */
 
 .global-wrapper {

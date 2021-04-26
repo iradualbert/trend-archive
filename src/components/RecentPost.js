@@ -14,7 +14,7 @@ const RecentPost = ({ post }) => {
 
   return (
     <Card to={fields.slug} itemProp="url">
-      <MainImage photo={photo} alt="" />
+      <MainImage photo={photo} alt={title} />
       <Section>
         <Title>{title}</Title>
         <p

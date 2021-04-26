@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
   return (
     <Card>
       <Link to={link}>
-        <PostCardImage photo={photo} alt=""/>
+        <PostCardImage photo={photo} alt={title}/>
       </Link>
       <Article itemScope>
         <small>{post.frontmatter.date}</small>

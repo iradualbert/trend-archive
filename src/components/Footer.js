@@ -12,6 +12,7 @@ const supportData = [
   { title: "About Us", link: "/about" },
   { title: "Contact Us", link: "/contact" },
   { title: "Privacy Policy", link: "/privacy-policy" },
+  { title: "Disclaimer", link: "/disclaimer" },
 ]
 
 const communityData = [

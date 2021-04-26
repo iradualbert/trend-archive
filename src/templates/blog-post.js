@@ -35,7 +35,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-          {photo && <MainImage photo={photo} alt=""/>}
+          {photo && <MainImage photo={photo} alt={post.frontmatter.title}/>}
         </header>
         <section
           style={{ marginTop: 20 }}
