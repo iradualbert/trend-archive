@@ -1,11 +1,14 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/Seo";
-import { MainImage } from "../components/shared";
+import Seo from "../components/Seo"
+import { MainImage } from "../components/shared"
 // import ShareOptions from "../components/ShareOptions";
 
-
+const localUrl = "http://127.0.0.1:8000/add-view/"
+const prodUrl = "https://trendarchive.herokuapp.com/add-view/"
+const analytics_url =
+  window.location.hostname === "www.thetrendarchive.com/" ? prodUrl : localUrl
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -18,7 +21,29 @@ const BlogPostTemplate = ({ data, location }) => {
     next = null
   }
   const isBlog = post.frontmatter.notBlog ? false : true
-  const photo = post.frontmatter.photo;
+  const photo = post.frontmatter.photo
+  const addView = React.useRef()
+  addView.current = async () => {
+    if (!isBlog) return
+    const data = {
+      title: post.frontmatter?.title,
+      slug: post.fields.slug,
+      url: window.location.href,
+    }
+    try {
+      fetch(analytics_url, {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+      })
+    } catch (err) {}
+  }
+
+  React.useEffect(() => {
+    addView.current()
+  }, [])
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -35,7 +60,7 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-          {photo && <MainImage photo={photo} alt={post.frontmatter.title}/>}
+          {photo && <MainImage photo={photo} alt={post.frontmatter.title} />}
         </header>
         <section
           style={{ marginTop: 20 }}
@@ -95,6 +120,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
