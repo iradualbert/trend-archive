@@ -8,7 +8,7 @@ import { MainImage } from "../components/shared"
 const localUrl = "http://127.0.0.1:8000/add-view/"
 const prodUrl = "https://trendarchive.herokuapp.com/add-view/"
 const analytics_url =
-  window.location.hostname === "www.thetrendarchive.com/" ? prodUrl : localUrl
+  window.location.hostname === "www.thetrendarchive.com" ? prodUrl : localUrl
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
