@@ -7,8 +7,7 @@ import { MainImage } from "../components/shared"
 
 const localUrl = "http://127.0.0.1:8000/add-view/"
 const prodUrl = "https://trendarchive.herokuapp.com/add-view/"
-const analytics_url =
-  window.location.hostname === "www.thetrendarchive.com" ? prodUrl : localUrl
+
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -24,7 +23,8 @@ const BlogPostTemplate = ({ data, location }) => {
   const photo = post.frontmatter.photo
   const addView = React.useRef()
   addView.current = async () => {
-    if (!isBlog) return
+    if (!isBlog) return;
+    const analytics_url = window.location.hostname === "www.thetrendarchive.com" ? prodUrl : localUrl
     const data = {
       title: post.frontmatter?.title,
       slug: post.fields.slug,
