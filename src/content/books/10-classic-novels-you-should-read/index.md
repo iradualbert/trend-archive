@@ -1,5 +1,5 @@
 ---
-title: 10 Greatest Classic Novels of All Time You Should Read.
+title: The 10 Greatest Classic Novels Everyone Should Read.
 date: "2021-04-27"
 photo:  ./book-store.png
 ---
