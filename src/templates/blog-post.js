@@ -1,5 +1,6 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import styled from "styled-components";
 import Layout from "../components/layout"
 import Seo from "../components/Seo"
 import { MainImage } from "../components/shared"
@@ -8,7 +9,7 @@ import { MainImage } from "../components/shared"
 const localUrl = "http://127.0.0.1:8000/add-view/"
 const prodUrl = "https://trendarchive.herokuapp.com/add-view/"
 const analytics_url =
-  window.location.hostname === "www.thetrendarchive.com/" ? prodUrl : localUrl
+  window.location.hostname === "www.thetrendarchive.com" ? prodUrl : localUrl
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -52,7 +53,7 @@ const BlogPostTemplate = ({ data, location }) => {
         description={post.frontmatter.description || post.excerpt}
       />
       {/* <ShareOptions title={title}/> */}
-      <article
+      <PostWrappper
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
@@ -68,7 +69,7 @@ const BlogPostTemplate = ({ data, location }) => {
           itemProp="articleBody"
         />
         <hr />
-      </article>
+      </PostWrappper>
       <nav className="blog-post-nav">
         <ul
           style={{
@@ -153,6 +154,16 @@ export const pageQuery = graphql`
         title
         notBlog
       }
+    }
+  }
+`
+
+
+const PostWrappper = styled.article`
+  a {
+    img {
+      border-radius: 10px !important;
+      margin-bottom: 20px !important;
     }
   }
 `

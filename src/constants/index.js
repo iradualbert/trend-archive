@@ -9,3 +9,4 @@ const navOptions = [
 
 
 export { colors, navOptions };
+export * from "./configs";
